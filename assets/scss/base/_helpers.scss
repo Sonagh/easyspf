@@ -1,0 +1,49 @@
+.icon {
+  display: inline-block;
+  margin-right: $unit;
+}
+
+.nav-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.has-notification {
+  @include notification-info($header-bg);
+}
+
+.badge {
+  padding: calc($unit / 4) calc($unit / 2);
+  margin-inline: calc($unit / 2);
+  text-transform: uppercase;
+  font-size: rem-calc($font-size-xs);
+  font-weight: $font-weight-medium;
+  color: $white;
+  background-color: $warning;
+  border-radius: $radius-xs;
+}
+
+.circle-progress {
+  width: 40px;
+  height: 40px;
+  transform: rotate(-90deg);
+
+  .percent {
+    stroke: $secondary;
+    stroke-dasharray: 100;
+    stroke-dashoffset: calc(100 - 25);
+    stroke-linecap: round;
+  }
+
+  &-wrapper {
+    height: 40px;
+    position: relative;
+
+    .text {
+      @include position(absolute, 50%, $left: 50%);
+      transform: translate(-50%, -50%);
+      font-size: rem-calc(10px);
+      color: $blue;
+    }
+  }
+}

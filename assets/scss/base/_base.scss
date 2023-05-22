@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500;700&display=swap');
+
+html,
+body {
+  font-size: $font-size-base; // 14
+
+  /* 1920px and bigger */
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+  }
+
+  /* 992px to 1200px */
+  @include media-breakpoint-between(md, lg) {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: $font-family-base;
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+main {
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1, .h1 {
+  font-size: rem-calc($font-size-lg);
+}
+
+h3, .h3 {
+  font-size: rem-calc($font-size-sm);
+}
+
+p {
+  line-height: $line-height-base;
+  margin-bottom: $unit-lg;
+}

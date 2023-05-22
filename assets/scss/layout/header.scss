@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $unit-xs $unit;
+  background-color: $header-bg;
+
+  &-right-side {
+    display: flex;
+    font-family: $font-family-secondary;
+    color: $white;
+    list-style-type: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding-inline: $unit;
+      @include nav-separator;
+
+      &:last-child::before {
+        background-color: inherit;
+      }
+    }
+
+    .icon {
+      padding-right: calc($unit / 2);
+    }
+  }
+
+  .logo {
+    width: 200px;
+    object-fit: contain;
+  }
+
+  .logged-in {
+    width: 32px;
+    height: 32px;
+    text-transform: uppercase;
+    font-size: rem-calc($font-size-xs);
+    color: $white;
+    background-color: $primary;
+    border-radius: $radius-circle;
+    @extend .flex-center;
+  }
+}

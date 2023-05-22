@@ -1,0 +1,40 @@
+.nav {
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: $nav-padding;
+    font-size: rem-calc($nav-font-size);
+    font-weight: $font-weight-base;
+    text-transform: capitalize;
+    color: $nav-color;
+
+    .icon {
+      font-size: rem-calc($font-size-lead);
+    }
+
+    &:hover,
+    &.active {
+      font-weight: $font-weight-medium;
+      background-color: $nav-active-bg;
+      border-radius: $radius-base;
+      @include nav-separator(2px, $primary);
+
+      .icon {
+        color: $primary;
+      }
+    }
+
+    &.active {
+      cursor: auto;
+    }
+  }
+
+  /* 768px and smaller */
+  @include media-breakpoint-down(sm) {
+    &-item {
+      .icon {
+        margin-right: 0;
+      }
+    }
+  }
+}

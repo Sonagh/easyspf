@@ -1,0 +1,28 @@
+.main-content {
+  width: 100%;
+  padding: $unit-lg  $unit-lg + 8px;
+
+  &-title {
+    margin-bottom: $unit-lg;
+    font-family: $font-family-poppins;
+    font-weight: $font-weight-semi-medium;
+  }
+
+  &-block-title {
+    margin-bottom: $unit;
+    font-size: rem-calc($font-size-lg);
+    font-weight: $font-weight-normal;
+    font-family: $font-family-base;
+    text-align: center;
+  }
+}
+
+.network-choose-block {
+  padding: $unit;
+  background-color: $white;
+  border-radius: $radius-base;
+
+  .dropdown {
+    width: rem-calc(240px);
+  }
+}

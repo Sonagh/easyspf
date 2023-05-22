@@ -1,0 +1,32 @@
+.left-side-menu {
+  min-width: rem-calc($left-side-menu-desktop);
+  padding: $unit $unit-xs;
+  overflow-y: auto;
+  background-color: $white;
+  transition: left .25s linear;
+
+  &-title {
+    margin-block: $unit-lg;
+    font-size: rem-calc(13px);
+    color: $gray-600;
+  }
+
+  .icon-alert {
+    @include notification-info($white);
+  }
+
+  /* 768px and smaller */
+  @include media-breakpoint-down(sm) {
+    min-width: $left-side-menu-mobile;
+  }
+
+  /* 5576px and smaller */
+  @include media-breakpoint-down(xs) {
+    @include position(relative, $left: -$left-side-menu-mobile, $bottom: 0, $zIndex: 10);
+    margin-left: -$left-side-menu-mobile;
+
+    &.opened {
+      left: $left-side-menu-mobile;
+    }
+  }
+}

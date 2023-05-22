@@ -1,0 +1,20 @@
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    color: $white;
+    background-color: $value;
+  }
+
+  .btn-outline-#{$color} {
+    color: $white;
+    background-color: transparent;
+    border-color: $value !important;
+
+    @if($color == "muted") {
+      color: #484964 !important;
+    }
+  }
+
+  .text-#{$color} {
+    color: $value;
+  }
+}

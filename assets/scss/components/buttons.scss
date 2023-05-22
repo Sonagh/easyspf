@@ -1,0 +1,12 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: calc($unit - 6px) $unit;
+  font-size: rem-calc($font-size-base);
+  font-family: $font-family-base;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: $radius-base;
+}
